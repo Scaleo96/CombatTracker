@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Combat Tracker</title>
+    <link rel="stylesheet" href="style-main.css">
+</head>
+
+<body> 
+    
+    <div class="model">
+        <div id="addModal" class="modal-content">
+            <span class="close">&times;</span>
+            <p>Add another creature to the list</p>
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="fini">Initiative:</label>
+            <input type="number" id="fini" name="fini"><br><br>
+            
+            <button id="done">Add</button>
+        </div>
+    </div>
+    
+    <div class="model">
+        <div id="healthModal" class="modal-content">
+            <span class="close">&times;</span>
+            <p>Creature Stats</p>
+            <label for="chealth">Health Lost:</label>
+            <input type="number" id="chealth" name="chealth" target=""> <br><br>
+            
+            <ul id="statusul">
+            </ul>
+            
+            <button id="close">Done</button>
+            <button id="add-status">Add status</button>
+            <button id="delete" style="float: right;">Delete</button>
+            
+            <div class="model">
+                
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;
+                
+            <div id="statusModal" class="modal-content" style="position: relative; width: 100%; margin-left: 0%; padding: 0; left: 0%; box-shadow: 0px 0px;">
+                <p>Add status to creature</p>
+                <label for="sname">Status name:</label>
+                <input type="text" id="sname" name="sname"> <br><br>
+
+                <textarea id="sdesc" name="sdesc" placeholder="Status description" cols="68" rows="5"></textarea>
+                <!--
+                <label for="sdesc">Status description:</label>
+                <input type="text" class="description-box" id="sdesc" name="sdesc"> <br><br>
+                -->
+                <label for="sleng">Status length:</label>
+                <input type="number" id="sleng" name="sleng"> <br><br>
+
+                <button id="sadd">Add</button>
+                <button id="scancel" style="float: right;">Close</button>
+            </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <div>
+        <div class="dot"></div>
+        <ul class="creature-list">      
+        </ul>
+    </div>
+    
+    <div>
+        <button class="add-creature-button" id="add">Add creature</button>
+        <button id="turn">End Turn</button>
+        <button id="reset">Reset</button>
+        <label class="current-round" for="currentRound">Current Round:</label>
+        <span class="current-round" id="currentRound">0</span>
+    </div>
+
+</body>
+
+    <script type="text/javascript" src="/jquery-3.5.1.js"></script>
+    <script type="text/javascript" src="/script.js"></script>
+    
+</html>
